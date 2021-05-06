@@ -215,17 +215,6 @@ if __name__ == "__main__":
     net = BiSeNet(19).to(device)
     net.eval()
 
-    # own_state = net.state_dict()
-    # model = torch.load('79999_iter.pth', map_location=device)
-    # params = []
-    # for name in model:
-    #     if not (name.startswith('conv_out32.') or name.startswith('conv_out16.')):
-    #         params.append((name, model[name]))
-    # print(len(own_state), len(params))
-    # for i, name in enumerate(own_state.keys()):
-    #     own_state[name].copy_(params[i][1])
-    # torch.save(own_state, 'my_params.pth')
-
     with torch.no_grad():
         in_ten = torch.randn(2, 3, 512, 512).to(device)
         out = net(in_ten)
