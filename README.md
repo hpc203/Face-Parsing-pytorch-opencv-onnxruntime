@@ -3,6 +3,8 @@
 .pth文件和.onnx文件从百度云盘下载，
 链接：https://pan.baidu.com/s/1VGm7wsfCMw_RH7V_3ODuhg 
 提取码：fza0 
+
+
 基于pytorch框架运行的主程序是main_pytorch.py， 基于opencv运行的是main_opencv.py， 基于onnxruntime运行的是main_onnxrun.py
 。在运行程序时，会保存神经网络的输入和输出到.npy文件。运行完这3个程序后，运行cmp_debug.py，它会比较在调用这三个不同框架时，
 同一个神经网络的输入和输出的差异。
